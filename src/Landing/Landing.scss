@@ -48,12 +48,12 @@
 }
 .landing_section_2 {
   padding: 8rem 0;
-  // h2 {
-  //   width: 1024px;
-  //   margin: auto;
-  //   padding-bottom: 4rem;
-  //   font-size: 1.3rem;
-  // }
+  h2 {
+    width: 1024px;
+    margin: auto;
+    padding-bottom: 4rem;
+    font-size: 1.3rem;
+  }
   .landing_section_2_inner {
     width: 1024px;
     margin: auto;
@@ -193,7 +193,7 @@
     align-items: center;
     h1 {
       font-size: 2.5rem;
-      min-width: 357px;
+      width: 400px;
       padding-bottom: 1.5rem;
       position: relative;
       &::after {

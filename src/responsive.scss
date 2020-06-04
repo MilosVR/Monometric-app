@@ -45,6 +45,11 @@
   .landing_section_1_inner {
     width: 40% !important;
   }
+  .landing_section_2 {
+    h2 {
+      width: 100%;
+    }
+  }
   .landing_section_2_inner {
     flex-direction: column;
     width: 100% !important;
@@ -289,7 +294,7 @@
     flex-direction: column;
   }
   .landing_section_1 {
-    height: 800px;
+    height: 100vh;
   }
   .landing_section_1_inner {
     left: 2rem !important;
@@ -304,5 +309,8 @@
   .landing_section_1_image {
     top: -140px;
     right: -420px !important;
+  }
+  .navigation_links_collapse_menu a {
+    font-size: 1.5rem !important;
   }
 }

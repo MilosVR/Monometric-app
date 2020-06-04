@@ -1,0 +1,64 @@
+@import "../config.scss";
+
+.footer {
+  padding-bottom: 4rem;
+  padding-top: 2.5rem;
+  .footer_inner {
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer_right {
+      p {
+        color: #939393;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+      }
+      span {
+        font-size: 0.9rem;
+        color: #939393;
+      }
+    }
+    .footer_left {
+      img {
+      }
+    }
+  }
+  .footer_mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer_inner {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .footer_inner {
+    .footer_right {
+      display: none;
+    }
+    .footer_left {
+      display: none;
+    }
+    .footer_mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        padding: 1rem 0;
+      }
+      p {
+        color: #939393;
+        font-weight: bold;
+      }
+      span {
+        font-size: 0.9rem;
+        color: #939393;
+      }
+    }
+  }
+}

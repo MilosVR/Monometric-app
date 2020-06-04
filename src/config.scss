@@ -1,0 +1,89 @@
+$primary_color: #4d9988;
+$primary_color_light: #c4ddd7;
+
+$secondary_color: #939393;
+$secondary_color_light: #c4c4c4;
+
+$ternary_color: #96b5ad;
+
+$error_color: #e0333b;
+
+@font-face {
+  font-family: "NeueHaasGrotesk-std";
+  src: url("./fonts/NHaasGroteskTXPro-55Rg.ttf") format("woff2"),
+    url("./fonts/NHaasGroteskTXPro-55Rg.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueHaasGrotesk-bold";
+  src: url("./fonts/NHaasGroteskTXPro-75Bd.ttf") format("woff2"),
+    url("./fonts/NHaasGroteskTXPro-75Bd.ttf") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: "NeueHaasGrotesk-std";
+}
+a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "NeueHaasGrotesk-bold";
+}
+input {
+  outline: none;
+  border: 1px solid #d3d3d3;
+}
+.container {
+  margin: 0 auto;
+  width: 1440px;
+}
+@media only screen and (max-width: 1440px) {
+  .container {
+    width: auto;
+  }
+}
+.text_error {
+  color: red;
+  font-size: 0.9rem;
+}
+.primary_btn {
+  background: $primary_color;
+  color: #fbfbfb;
+}

@@ -1,0 +1,146 @@
+@import "../config.scss";
+
+#contact {
+  .contact {
+    display: flex;
+    padding-top: 100px;
+    width: 1024px;
+    margin: auto;
+    border-bottom: 1px solid #d3d3d3;
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  .logo {
+    padding-right: 2rem;
+  }
+  .contact_inner {
+    margin: auto;
+    .contact_header {
+      .contact_header_headline {
+        h1 {
+          padding-bottom: 1.5rem;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2rem;
+            height: 1px;
+            background: $primary_color;
+          }
+        }
+        p {
+          padding-top: 1.5rem;
+          padding-bottom: 2rem;
+          border-bottom: 1px solid #d3d3d3;
+          color: #878787;
+        }
+      }
+    }
+    .contact_from_wraper {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      .contact_from_wraper_desc {
+        width: 30%;
+        margin-right: 5rem;
+        h2 {
+        }
+      }
+      form {
+        .contact_form_info {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+          input {
+            padding: 0.5rem;
+            width: 100%;
+          }
+          p {
+            font-weight: bold;
+            padding: 0.3rem 0;
+            font-size: 0.8rem;
+          }
+          padding-bottom: 1.5rem;
+        }
+      }
+      .contact_form_industry_type {
+        padding: 1rem 0;
+        p {
+          font-weight: bold;
+          padding: 0.2rem 0;
+        }
+        .industry_type_select {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1rem;
+          & .industry_type_select_active {
+            background: #c4ddd7;
+            color: $primary_color;
+            font-weight: bold;
+          }
+          div {
+            border: 1px solid #d3d3d3;
+            cursor: pointer;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+          }
+          padding-bottom: 1.5rem;
+        }
+      }
+      .contact_form_metric_units {
+        padding-bottom: 1.5rem;
+        p {
+          padding-bottom: 0.2rem;
+          font-weight: bold;
+        }
+        input {
+          width: 4rem;
+          height: 3rem;
+          text-align: center;
+        }
+      }
+      .contact_form_checkboxes {
+        padding-bottom: 1.5rem;
+        .contact_form_checkbox_field {
+          margin: 0.5rem 0;
+        }
+        span {
+          margin-left: 0.75rem;
+        }
+      }
+      .contact_form_additional_details {
+        padding-bottom: 1.5rem;
+        p {
+          padding-bottom: 0.2rem;
+          font-weight: bold;
+        }
+        textarea {
+          width: 100%;
+          resize: none;
+          padding: 1rem;
+          border: 1px solid #d3d3d3;
+        }
+        span {
+          font-size: 0.8rem;
+        }
+        input[type="checkbox"] {
+          border: 1px solid #d3d3d3;
+          margin-right: 0.5rem;
+          margin-top: 1.75rem;
+          margin-bottom: 2rem;
+        }
+      }
+      input[type="submit"] {
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        border-radius: 0.2rem;
+        background: $primary_color;
+        color: #fff;
+      }
+    }
+  }
+}

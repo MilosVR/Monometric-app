@@ -87,3 +87,48 @@ input {
   background: $primary_color;
   color: #fbfbfb;
 }
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
+}
+// slick-active
+.slick-dots {
+  padding-top: 0.5rem;
+  li {
+    &.slick-active {
+      button {
+        &::before {
+          font-size: 6px;
+          line-height: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          content: "•";
+          font-size: 1rem;
+          text-align: center;
+          color: #333 !important;
+        }
+      }
+    }
+    button {
+      &::before {
+        font-size: 6px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        content: "•";
+        font-size: 1rem;
+        text-align: center;
+        opacity: 0.25;
+        color: #979797;
+      }
+    }
+  }
+}

@@ -268,16 +268,18 @@
     }
   }
 }
+.landing_section_4_left_mobile {
+  display: none;
+}
 .testimonial {
   padding: 8rem 0;
   .testimonial_slider {
-    display: flex;
-    justify-content: center;
+    width: 550px;
+    height: 420px;
+    overflow: hidden;
+    margin: auto;
     .testimonial_slider_item {
-      max-width: 540px;
-      max-height: 397px;
       padding: 0 1rem;
-
       .testimonial_img {
         padding-bottom: 2rem;
       }

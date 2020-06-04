@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import Fade from "react-reveal/Fade";
 
 const Navbar = (props) => {
   useEffect(() => {});

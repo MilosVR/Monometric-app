@@ -258,6 +258,9 @@
       font-size: 2rem !important;
     }
   }
+  .testimonial_slider {
+    width: 100% !important;
+  }
   .landing_section_1_image {
     position: absolute;
     background: url("/assets/landing_bg.png") no-repeat;
@@ -330,5 +333,29 @@
     h2 {
       padding-bottom: 2rem;
     }
+  }
+  .landing_section_4_left_mobile {
+    display: block !important;
+    width: 100%;
+    padding-bottom: 3rem;
+    div {
+      width: 100%;
+      text-align: center;
+      h2 {
+        width: 100%;
+        padding: 0.5rem;
+        color: $primary_color;
+      }
+      p {
+        color: #878787;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .landing_section_4_left {
+    display: none;
+  }
+  .testimonial {
+    padding: 4rem 0;
   }
 }

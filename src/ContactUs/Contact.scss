@@ -144,3 +144,46 @@
     }
   }
 }
+// Contact Success page
+.contact_success_wraper {
+  width: 1440px;
+  margin: auto;
+  .contact_success_desc {
+    padding-top: 200px;
+    display: flex;
+    height: 80vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    img {
+      padding-bottom: 1.5rem;
+    }
+    h1 {
+      padding: 1rem 0;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 2rem;
+        height: 1px;
+        background: $primary_color;
+      }
+    }
+    p {
+      color: #878787;
+      padding-top: 0.75rem;
+    }
+    a {
+      background: $primary_color;
+      color: #fff;
+      margin: 1.5rem 0;
+      padding: 1rem 2rem;
+      border-radius: 0.2rem;
+    }
+  }
+}

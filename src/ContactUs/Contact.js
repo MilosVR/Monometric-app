@@ -8,7 +8,10 @@ const Contact = (props) => {
     const hamburger_menu = document.querySelector(".hamburger_menu");
     const contact_btn = document.querySelector(".contact_btn");
 
-    if (props.location.pathname === "/contact") {
+    if (
+      props.location.pathname === "/contact" ||
+      props.location.pathname === "/contact-success"
+    ) {
       hamburger_menu.classList.add("hamburger_menu_dark");
       hamburger_menu.classList.remove("hamburger_menu_white");
       contact_btn.style.background = "#C4DDD7";
@@ -51,24 +54,28 @@ const Contact = (props) => {
         allFieldsErr:
           "There was a problem with your submission. Please fix the errors and try again",
       });
+      window.scrollTo(0, 0);
     } else if (!formData.lastName) {
       setContactFormError({
         lastNameErr: "Last Name is required",
         allFieldsErr:
           "There was a problem with your submission. Please fix the errors and try again",
       });
+      window.scrollTo(0, 0);
     } else if (!formData.email) {
       setContactFormError({
         emailErr: "Email is required",
         allFieldsErr:
           "There was a problem with your submission. Please fix the errors and try again",
       });
+      window.scrollTo(0, 0);
     } else if (!formData.company) {
       setContactFormError({
         companyErr: "Company is required",
         allFieldsErr:
           "There was a problem with your submission. Please fix the errors and try again",
       });
+      window.scrollTo(0, 0);
     } else {
       setContactFormError({
         firstNameErr: "",
@@ -76,7 +83,7 @@ const Contact = (props) => {
         emailErr: "",
         companyErr: "",
       });
-      console.log(formData);
+      props.history.push("/contact-success");
     }
   };
 

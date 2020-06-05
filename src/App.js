@@ -5,6 +5,7 @@ import "./config.scss";
 import "./responsive.scss";
 import Navbar from "./Navbar/Navbar";
 import Contact from "./ContactUs/Contact";
+import ContactSuccess from "./ContactUs/ContactSuccess";
 
 function App(props) {
   return (
@@ -13,6 +14,7 @@ function App(props) {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/contact" component={Contact} />
+        <Route path="/contact-success" component={ContactSuccess} />
       </Switch>
     </BrowserRouter>
   );

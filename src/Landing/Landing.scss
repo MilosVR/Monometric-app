@@ -14,7 +14,7 @@
     background-size: contain;
     width: 1440px;
     height: 874px;
-    right: -350px;
+    right: -150px;
   }
   .landing_section_1_inner {
     position: absolute;
@@ -107,6 +107,7 @@
         border-bottom: 1px solid #d3d3d3;
         p {
           padding-left: 2rem;
+          font-weight: bold;
         }
         img {
           width: 29px;
@@ -133,8 +134,8 @@
           bottom: 0;
           left: 0;
           width: 2rem;
-          height: 1px;
-          background: #333;
+          height: 2px;
+          background: $primary_color;
         }
       }
       p {
@@ -177,9 +178,14 @@
           bottom: 0;
           left: 0;
           width: 2rem;
-          height: 1px;
+          height: 2px;
           background: $primary_color;
         }
+      }
+    }
+    .landing_section_4_right {
+      span {
+        display: none;
       }
     }
   }
@@ -202,8 +208,8 @@
         bottom: 0;
         left: 0;
         width: 2rem;
-        height: 1px;
-        background: #333;
+        height: 2px;
+        background: $primary_color;
       }
     }
     p {
@@ -225,7 +231,7 @@
     height: 100vh;
     background: url(/assets/img_3.svg);
     object-fit: cover;
-    right: -30px;
+    // right: 0px;
   }
   .landing_section_6_inner {
     position: absolute;

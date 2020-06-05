@@ -70,8 +70,8 @@ const LandingSectionFour = () => {
             </Slider>
           </div>
         </Fade>
-
         <div className="landing_section_4_right">
+          <span>INDUSTRIES</span>
           <img alt="" src="/assets/img_1.svg" />
         </div>
       </div>

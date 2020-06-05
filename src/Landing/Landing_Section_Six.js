@@ -40,6 +40,7 @@ const LandingSectionSix = () => {
                 monitoring interval.
               </p>
             </div>
+            <div className="landing_section_6_inner_item_box"></div>
           </div>
         </Fade>
       </div>

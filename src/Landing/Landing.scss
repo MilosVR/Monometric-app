@@ -222,16 +222,15 @@
 .landing_section_6 {
   background: url(/assets/img_3.svg);
   position: relative;
-  height: 100vh;
+  height: 964px;
   overflow: hidden;
   margin: auto;
   .landing_section_6_image {
     position: absolute;
     width: 1280px;
-    height: 100vh;
+    height: 100%;
     background: url(/assets/img_3.svg);
     object-fit: cover;
-    // right: 0px;
   }
   .landing_section_6_inner {
     position: absolute;
@@ -259,11 +258,12 @@
         }
       }
       p {
-        padding: 1.5rem 0;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
       }
       .landing_section_6_inner_item {
         display: flex;
-        padding: 1.5rem 0;
+        padding: 1.3rem 0;
         border-bottom: 1px solid #d3d3d3;
         p {
           padding: 0;

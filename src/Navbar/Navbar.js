@@ -30,10 +30,10 @@ const Navbar = (props) => {
   };
 
   const toggleActiveLinkClass = (e) => {
-    const active_link = document.querySelector(".active_link");
-    if (!e.target.classList.contains("active_link")) {
-      e.target.classList.add("active_link");
-      active_link.classList.remove("active_link");
+    const active_link = document.querySelector(".active_link_nav");
+    if (!e.target.classList.contains("active_link_nav")) {
+      e.target.classList.add("active_link_nav");
+      active_link.classList.remove("active_link_nav");
     }
   };
 
@@ -58,8 +58,8 @@ const Navbar = (props) => {
             </li>
             <li>
               <Link
+                className="active_link_nav"
                 onClick={toggleActiveLinkClass}
-                className="active_link"
                 to="/"
               >
                 Testimonials

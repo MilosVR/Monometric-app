@@ -48,10 +48,8 @@ nav {
             font-weight: bold;
             padding: 1rem;
             border-bottom: 2px solid transparent;
-            border-width: 0px;
-            &.active_link {
+            &.active_link_nav {
               border-bottom: 2px solid $primary_color;
-              border-width: solid;
               transition: all 400ms ease-in-out;
               color: #333;
             }

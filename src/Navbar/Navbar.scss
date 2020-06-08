@@ -13,6 +13,7 @@ nav {
     justify-content: space-between;
     background: transparent;
     align-items: center;
+    padding: 0.5rem;
     .logo {
       display: flex;
       align-items: center;
@@ -40,19 +41,26 @@ nav {
         display: flex;
         align-items: center;
         li {
-          padding: 1rem;
-          border-bottom: 2px solid transparent;
-          &:hover {
-            border-bottom: 2px solid $primary_color;
-            transition: all 400ms ease-in-out;
-            a {
-              transition: all 200ms ease-in-out;
-              color: #333;
-            }
-          }
+          margin: 0 0.2rem;
+          text-align: center;
           a {
             color: $ternary_color;
             font-weight: bold;
+            padding: 1rem;
+            border-bottom: 2px solid transparent;
+            border-width: 0px;
+            &.active_link {
+              border-bottom: 2px solid $primary_color;
+              border-width: solid;
+              transition: all 400ms ease-in-out;
+              color: #333;
+            }
+            &:hover {
+              color: #333;
+              border-width: 100%;
+              border-bottom: 2px solid $primary_color;
+              transition: all 400ms ease-in-out;
+            }
           }
         }
       }

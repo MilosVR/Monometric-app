@@ -29,6 +29,15 @@ const Navbar = (props) => {
     logo.classList.remove("open_collapse_menu");
   };
 
+  const toggleActiveLinkClass = (e) => {
+    const active_link = document.querySelector(".active_link");
+    if (!e.target.classList.contains("active_link")) {
+      e.target.classList.add("active_link");
+      active_link.classList.remove("active_link");
+    }
+    console.log(e.target.classList);
+  };
+
   return (
     <nav>
       <div className="navbar ">
@@ -39,25 +48,39 @@ const Navbar = (props) => {
         <div className="navigation_links">
           <ul>
             <li>
-              <Link to="/">How it works</Link>
+              <Link onClick={toggleActiveLinkClass} to="/">
+                How it works
+              </Link>
             </li>
             <li>
-              <Link to="/">Solutions</Link>
+              <Link onClick={toggleActiveLinkClass} to="/">
+                Solutions
+              </Link>
             </li>
             <li>
-              <Link to="/">Testimoials</Link>
+              <Link
+                onClick={toggleActiveLinkClass}
+                className="active_link"
+                to="/"
+              >
+                Testimonials
+              </Link>
             </li>
             <li>
-              <Link to="/">MonoBox</Link>
+              <Link onClick={toggleActiveLinkClass} to="/">
+                MonoBox
+              </Link>
             </li>
             <li>
-              <Link to="/">Partners</Link>
+              <Link onClick={toggleActiveLinkClass} to="/">
+                Partners
+              </Link>
             </li>
           </ul>
         </div>
 
         <Link to="/contact">
-          <button className="contact_btn">Contact</button>
+          <button className="contact_btn">Contact Us</button>
         </Link>
 
         <div className="hamburger_menu" onClick={toggleCollapseMenu}>

@@ -322,6 +322,7 @@
     }
     .landing_section_2_inner {
       padding-bottom: 4rem !important;
+      padding-top: 2rem !important;
     }
   }
   .landing_section_5 {
@@ -369,9 +370,7 @@
   .testimoial_info {
     flex-direction: column;
   }
-  .landing_section_1 {
-    height: 615px !important;
-  }
+
   .landing_section_1_inner {
     left: 2rem !important;
     top: unset !important;
@@ -471,6 +470,9 @@
       background-size: cover !important;
     }
   }
+  .landing_section_1 {
+    height: 615px !important;
+  }
   .landing_section_1_image {
     top: -116px !important;
     right: -440px !important;
@@ -500,7 +502,7 @@
     }
   }
   .testimonial_slider {
-    height: 40px !important;
+    height: 460px !important;
   }
   .landing_section_3_inner_left {
     h1 {

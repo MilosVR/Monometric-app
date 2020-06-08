@@ -35,7 +35,6 @@ const Navbar = (props) => {
       e.target.classList.add("active_link");
       active_link.classList.remove("active_link");
     }
-    console.log(e.target.classList);
   };
 
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./Landing/Landing";
 import "./config.scss";
-import "./responsive.scss";
 import Navbar from "./Navbar/Navbar";
 import Contact from "./ContactUs/Contact";
 import ContactSuccess from "./ContactUs/ContactSuccess";

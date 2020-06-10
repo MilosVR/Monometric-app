@@ -1,5 +1,4 @@
 @import "../config.scss";
-@import "../responsive.scss";
 nav {
   background: transparent;
   position: absolute;
@@ -136,5 +135,131 @@ nav {
         }
       }
     }
+  }
+}
+
+// Media query
+@media only screen and (max-width: 1024px) {
+  nav {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+}
+@media only screen and (max-width: 970px) {
+  nav {
+    .navbar {
+      .contact_btn {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 970px) {
+  .navigation_links {
+    display: none;
+  }
+  nav {
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .hamburger_menu {
+    display: flex !important;
+    height: 1.5rem;
+    width: 1.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &.hamburger_menu_white {
+      span {
+        background: #fff;
+      }
+    }
+    &.hamburger_menu_dark {
+      span {
+        background: #333;
+      }
+    }
+    &.open_collapse_menu {
+      justify-content: center;
+      span {
+        transition: all 250ms ease-in-out;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          margin-top: -4px;
+        }
+      }
+    }
+    span {
+      transition: all 250ms ease-in-out;
+      width: 100%;
+      height: 4px;
+      background: white;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  nav {
+    .navbar {
+      .collapse_menu {
+        &.open_collapse_menu {
+          .navigation_links_collapse_menu {
+            left: 14%;
+            width: 90%;
+            top: 53%;
+            ul {
+              li {
+                border-bottom: none;
+                a {
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav {
+    .navbar {
+      .collapse_menu {
+        &.open_collapse_menu {
+          .navigation_links_collapse_menu {
+            left: 14%;
+            width: 90%;
+            top: 53%;
+            ul {
+              padding: 2rem 0;
+              li {
+                border-bottom: none;
+                a {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact_btn_collapse_menu {
+    width: 100%;
+    margin-top: 0 !important;
+  }
+}
+
+// ------------------------------------------------
+@media only screen and (max-height: 600px) {
+  .navbar_footer {
+    padding-bottom: 0.75rem;
   }
 }

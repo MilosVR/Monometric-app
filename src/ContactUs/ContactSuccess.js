@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
 
 const ContactSuccess = (props) => {
   return (
@@ -14,11 +13,26 @@ const ContactSuccess = (props) => {
         </p>
         <Link to="/">Back to Homepage</Link>
       </div>
-      <Footer />
+      <div className="footer">
+        <div className="footer_inner">
+          <div className="footer_right">
+            <p>+386 42 442 442</p>
+            <p>customercare@monometrics.com</p>
+            <span>&copy; Monometrics 2020</span>
+          </div>
+          <div className="footer_left">
+            <img alt="" src="/assets/logo_icon.svg" />
+          </div>
+          <div className="footer_mobile">
+            <p>+386 42 442 442</p>
+            <p>customercare@monometrics.com</p>
+            <img alt="" src="/assets/logo_icon.svg" />
+            <span>&copy; Monometrics 2020</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ContactSuccess;
-
-// /contact-success

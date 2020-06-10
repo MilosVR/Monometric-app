@@ -203,13 +203,23 @@ const Contact = (props) => {
                     className="industry_type_select_active"
                     onClick={industryTypeSelect}
                   >
-                    Healthcare
+                    <p>Healthcare</p>
                   </div>
-                  <div onClick={industryTypeSelect}>Office</div>
-                  <div onClick={industryTypeSelect}>Production</div>
-                  <div onClick={industryTypeSelect}>Transportation</div>
-                  <div onClick={industryTypeSelect}>Infrastructure</div>
-                  <div onClick={industryTypeSelect}>IT</div>
+                  <div onClick={industryTypeSelect}>
+                    <p>Office</p>
+                  </div>
+                  <div onClick={industryTypeSelect}>
+                    <p>Production</p>
+                  </div>
+                  <div onClick={industryTypeSelect}>
+                    <p>Transportation</p>
+                  </div>
+                  <div onClick={industryTypeSelect}>
+                    <p>Infrastructure</p>
+                  </div>
+                  <div onClick={industryTypeSelect}>
+                    <p>IT</p>
+                  </div>
                 </div>
               </div>
               <div className="contact_form_metric_units">
@@ -217,37 +227,44 @@ const Contact = (props) => {
                 <input placeholder="ex. 5" type="number" min="1" />
               </div>
               <div className="contact_form_checkboxes">
-                <div className="contact_form_checkbox_field">
+                <label className="contact_form_checkbox_field">
                   <input type="checkbox" />
-                  <span>Mobile Notification Module</span>
-                </div>
-                <div className="contact_form_checkbox_field">
+                  <span className="checkmark"></span>
+                  <p>Mobile Notification Module</p>
+                </label>
+                <label className="contact_form_checkbox_field">
                   <input type="checkbox" />
-                  <span>Multisite/Single site</span>
-                </div>
-                <div className="contact_form_checkbox_field">
+                  <span className="checkmark"></span>
+                  <p>Multisite/Single site</p>
+                </label>
+                <label className="contact_form_checkbox_field">
                   <input type="checkbox" />
-                  <span>Number of people accessing platform</span>
-                </div>
-                <div className="contact_form_checkbox_field">
+                  <span className="checkmark"></span>
+                  <p>Number of people accessing platform</p>
+                </label>
+                <label className="contact_form_checkbox_field">
                   <input type="checkbox" />
-                  <span>Reporting Form</span>
-                </div>
+                  <span className="checkmark"></span>
+                  <p>Reporting Form</p>
+                </label>
               </div>
               <div className="contact_form_additional_details">
                 <p>Additional Details</p>
                 <textarea
                   rows="7"
                   cols="10"
-                  placeholder="Enter additional details here"
+                  placeholder="Enter additional details here..."
                 ></textarea>
-                <input type="checkbox" />
-                <span>
-                  Z upograbo tega obrazca se strinjam s hrambo in upravljanjem
-                  podatkov na tej spletni strani.
-                </span>
+                <label className="contact_form_checkbox_field">
+                  <input type="checkbox" />
+                  <span className="checkmark"></span>
+                  <p>
+                    Z uporabo tega obrazca se strinjam s hrambo in upravljanjem
+                    podatkov na tej spletni strani.
+                  </p>
+                </label>
               </div>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit Form" />
             </form>
           </div>
         </div>

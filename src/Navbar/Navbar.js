@@ -48,7 +48,7 @@ const Navbar = (props) => {
           <ul>
             <li>
               <Link onClick={toggleActiveLinkClass} to="/">
-                How it works
+                How it Works
               </Link>
             </li>
             <li>
@@ -91,7 +91,7 @@ const Navbar = (props) => {
           <div className="navigation_links_collapse_menu">
             <ul>
               <li onClick={closeCollapseMenu}>
-                <Link to="/">How it works</Link>
+                <Link to="/">How it Works</Link>
               </li>
               <li onClick={closeCollapseMenu}>
                 <Link to="/">Solutions</Link>
@@ -111,7 +111,7 @@ const Navbar = (props) => {
                 className="contact_btn_collapse_menu"
                 onClick={closeCollapseMenu}
               >
-                Contact
+                Contact Us
               </button>
             </Link>
             <div className="navbar_footer">

@@ -1,18 +1,15 @@
 @import "./config.scss";
 
 @media only screen and (max-width: 1440px) {
-  .contact {
-    width: 100% !important;
-  }
   .landing_section_5_inner {
     width: 100% !important;
   }
   .landing_section_1 {
     width: 100% !important;
   }
-  .contact_success_wraper {
-    width: 100% !important;
-  }
+  // .contact_success_wraper {
+  //   width: 100% !important;
+  // }
   .landing_section_1_inner {
     left: 6rem !important;
     transform: translate(6rem, -50%) !important;
@@ -50,19 +47,23 @@
     align-items: flex-start;
     width: 445px;
   }
-  .landing_section_1_image {
-    right: -280px !important;
-  }
   .landing_section_6_image {
     width: 1280px;
     height: 100vh;
     right: -30px;
   }
+  .landing_section_1_image {
+    right: -280px !important;
+  }
 }
 @media only screen and (max-width: 1024px) {
   nav {
     width: 100% !important;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+  }
+  .contact {
+    width: 100% !important;
+    padding: 0 0.5rem;
   }
   .landing_section_2 {
     h2 {
@@ -93,9 +94,10 @@
     padding: 0 1rem;
     .landing_section_2_item {
       display: flex;
-      border: 1px solid #d3d3d3;
-      align-items: center;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
       padding-right: 0.5rem;
+      flex-direction: row !important;
       &:nth-child(2) {
         margin: 1rem 0 !important;
       }
@@ -103,7 +105,6 @@
   }
   .landing_section_3 {
     padding-top: 0rem;
-    padding: 0 1rem 8rem 1rem;
     .landing_section_3_inner {
       width: 100% !important;
     }
@@ -130,12 +131,19 @@
     }
     .landing_section_6_inner {
       top: 50%;
-      width: 90%;
+      width: 90% !important;
       left: 50% !important;
       transform: translate(-50%, -50%) !important;
       padding: 0 0.2rem;
+      .landing_section_6_inner_item_wraper {
+        width: 100%;
+        .landing_section_text {
+          max-width: 100%;
+        }
+      }
     }
   }
+
   .landing_section_1_image {
     width: 1300px !important;
     height: 800px !important;
@@ -154,7 +162,9 @@
     display: none;
   }
   nav {
-    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
   .contact_btn {
     display: none !important;
@@ -209,6 +219,9 @@
       font-size: 2.4rem !important;
     }
   }
+  .landing_section_3 {
+    padding: 0 2rem 8rem 2rem;
+  }
   .landing_section_1_image {
     position: absolute;
     background: url("/assets/landing_bg.png") no-repeat;
@@ -255,6 +268,9 @@
   }
   .contact_from_wraper {
     flex-direction: column;
+    form {
+      width: 100% !important;
+    }
     .contact_from_wraper_desc {
       h3 {
         width: 200px;
@@ -314,6 +330,26 @@
     right: -300px !important;
   }
 }
+@media only screen and (max-width: 500px) {
+  .contact {
+    padding-top: 120px !important;
+  }
+  .landing_section_2_inner {
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0 1rem;
+    .landing_section_2_item {
+      display: flex;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      padding-right: 0.5rem;
+      flex-direction: column !important;
+      &:nth-child(2) {
+        margin: 1rem 0 !important;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 450px) {
   .landing_section_2 {
     padding: 2rem 0 !important;
@@ -325,6 +361,9 @@
       padding-top: 2rem !important;
     }
   }
+  .landing_section_3 {
+    padding: 0 1.3rem 5rem 1.3rem;
+  }
   .landing_section_5 {
     padding: 3rem 0 !important;
   }
@@ -334,7 +373,11 @@
   .landing_section_5_right {
     padding-left: 1.5rem !important;
     h1 {
-      font-size: 1.8rem !important;
+      font-size: 1.75rem !important;
+    }
+    p {
+      font-size: 0.875rem !important;
+      padding-right: 0.5rem;
     }
   }
   .landing_section_2_inner {
@@ -347,11 +390,26 @@
       padding-right: 0rem;
     }
   }
+  .landing_section_4_right {
+    span {
+      background: #fff;
+    }
+  }
   .landing_section_4_left_mobile {
+    padding: 1rem;
     div {
-      p {
-        padding: 1rem;
+      text-align: left !important;
+      h2 {
+        padding: 1rem 0;
+        font-size: 1.75rem !important;
       }
+      p {
+        padding: 0.5rem;
+        font-size: 0.875rem !important;
+      }
+    }
+    & .slick-dots {
+      display: flex !important;
     }
   }
   .landing_section_5_inner {
@@ -360,7 +418,8 @@
       padding-left: 4rem;
       padding-top: 2rem;
       h1 {
-        font-size: 2.1rem;
+        width: 100% !important;
+        font-size: 1.75rem !important;
       }
       p {
         max-width: 100%;
@@ -372,7 +431,7 @@
   }
 
   .landing_section_1_inner {
-    left: 2rem !important;
+    left: 1rem !important;
     top: unset !important;
     bottom: 2rem;
     transform: unset !important;
@@ -389,14 +448,9 @@
   .navigation_links_collapse_menu a {
     font-size: 1.5rem !important;
   }
-  .landing_section_5_inner {
-    h1 {
-      width: 100% !important;
-      font-size: 2rem !important;
-    }
-  }
   .landing_section_2 {
-    padding: 4rem 0;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     h2 {
       padding-bottom: 2rem;
     }
@@ -446,6 +500,9 @@
     }
   }
   .landing_section_7 {
+    button {
+      font-weight: normal !important;
+    }
     p {
       padding: 0 1rem;
     }
@@ -458,12 +515,126 @@
       padding: 0.75rem;
     }
     img {
-      max-height: 300px;
       object-fit: fill !important;
+      max-height: 210px;
+    }
+  }
+  .landing_section_2_inner {
+    padding-left: 1rem;
+    .landing_section_2_item {
+      width: 100% !important;
+    }
+  }
+  .landing_section_3_inner_left {
+    h1 {
+      font-size: 1.75rem !important;
+      padding-right: 0 !important;
+    }
+    p {
+      font-size: 0.85rem !important;
+    }
+  }
+  .landing_section_3_inner_right_item {
+    padding: 1.5rem 0px 1.5rem 0rem !important;
+    img {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+    p {
+      font-size: 0.85rem !important;
+      font-weight: bold !important;
+    }
+  }
+  .landing_section_6_inner_item_wraper {
+    padding-top: 3rem;
+    .landing_section_text {
+      color: #878787 !important;
+    }
+    h1 {
+      font-size: 1.75rem !important;
+    }
+    p {
+      font-size: 0.875rem !important;
+      font-weight: bold !important;
+    }
+  }
+  .testimonial {
+    padding-bottom: 1.75rem !important;
+  }
+  .testimonial_slider {
+    padding: 0.5rem;
+  }
+  .testimonial_img {
+    width: 40px;
+    height: 34px;
+    padding: 0 !important;
+  }
+  .testimonial_item_text {
+    padding-top: 1.2rem;
+    font-size: 1rem !important;
+    line-height: 1.75rem !important;
+  }
+  .landing_section_2 {
+    h2 {
+      font-size: 1.125rem !important;
+    }
+  }
+  .landing_section_2_item {
+    .landing_section_2_item_desc {
+      div {
+        padding-top: 0 !important;
+      }
+    }
+    h3 {
+      font-size: 1.125rem !important;
+    }
+    p {
+      font-size: 0.875rem !important;
+    }
+  }
+  .landing_section_6 {
+    height: 920px;
+    .landing_section_6_inner_item_box {
+      margin-top: 1.5rem;
+    }
+  }
+  .landing_section_7 {
+    h1 {
+      font-size: 1.75rem !important;
     }
   }
 }
 @media only screen and (max-width: 400px) {
+  .contact {
+    padding-top: 100px !important;
+    padding: 0 1rem;
+    .contact_header_headline {
+      h1 {
+        font-size: 1.75rem !important;
+      }
+      p {
+        font-size: 0.85rem !important;
+      }
+    }
+    .contact_form_additional_details {
+      padding-bottom: 0 !important;
+    }
+    input[type="submit"] {
+      width: 100% !important;
+    }
+  }
+  .navigation_links_collapse_menu a {
+    font-size: 1rem !important;
+  }
+  .navigation_links_collapse_menu {
+    ul {
+      padding: 2rem 0;
+    }
+  }
+  .contact_btn_collapse_menu {
+    width: 100%;
+    margin-top: 0 !important;
+  }
   .landing_section_6 {
     background-size: cover !important;
     .landing_section_6_image {
@@ -471,7 +642,7 @@
     }
   }
   .landing_section_1 {
-    height: 615px !important;
+    height: 630px !important;
   }
   .landing_section_1_image {
     top: -116px !important;
@@ -482,8 +653,11 @@
   .landing_section_1_inner {
     padding-right: 0.5rem;
     h1 {
-      font-size: 1.8rem !important;
+      font-size: 1.75rem !important;
       padding-bottom: 0.5rem !important;
+    }
+    p {
+      font-size: 1rem !important;
     }
   }
 }
@@ -502,11 +676,17 @@
     }
   }
   .testimonial_slider {
-    height: 460px !important;
+    // height: 460px !important;
   }
   .landing_section_3_inner_left {
     h1 {
       font-size: 1.5rem !important;
     }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar_footer {
+    padding-top: 3rem !important;
+    padding-bottom: 0.5rem;
   }
 }

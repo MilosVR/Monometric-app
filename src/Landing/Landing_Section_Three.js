@@ -25,7 +25,9 @@ const LandingSectionThree = () => {
           <div className="landing_section_3_inner_right">
             <div className="landing_section_3_inner_right_item">
               <img src="assets/icon_1.svg" alt="" />
-              <p>Early warning and multi layer monitoring tools.</p>
+              <p style={{ fontWeight: "normal" }}>
+                Early warning and multi layer monitoring tools.
+              </p>
             </div>
             <div className="landing_section_3_inner_right_item">
               <img src="assets/icon_2.svg" alt="" />

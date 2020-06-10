@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 const LandingSectionTwo = () => {
   return (
     <div className="landing_section_2">
-      <h2>How it works</h2>
+      <h2>How it Works</h2>
       <div className="landing_section_2_inner">
         <Fade bottom>
           <div className="landing_section_2_item">

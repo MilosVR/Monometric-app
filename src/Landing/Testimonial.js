@@ -14,7 +14,7 @@ const Testimonial = () => {
               alt=""
               className="testimonial_img"
             />
-            <p>
+            <p className="testimonial_item_text">
               Piio’s page speed improvements have resulted in a better
               experience for our site visitors and a positive signal to Google’s
               search ranking algorithm. Since we started using Piio, we’ve
@@ -23,7 +23,7 @@ const Testimonial = () => {
             <div className="testimoial_info">
               <div className="testimonial_info_desc">
                 <img alt="" src="/assets/testimonial_img.svg" />
-                <div>
+                <div className="testimonial_info_desc_wraper">
                   <p>David Budimir</p>
                   <span>Marketing @ Social Table</span>
                 </div>
@@ -37,7 +37,7 @@ const Testimonial = () => {
               alt=""
               className="testimonial_img"
             />
-            <p>
+            <p className="testimonial_item_text">
               Piio’s page speed improvements have resulted in a better
               experience for our site visitors and a positive signal to Google’s
               search ranking algorithm. Since we started using Piio, we’ve
@@ -46,7 +46,7 @@ const Testimonial = () => {
             <div className="testimoial_info">
               <div className="testimonial_info_desc">
                 <img alt="" src="/assets/testimonial_img.svg" />
-                <div>
+                <div className="testimonial_info_desc_wraper">
                   <p>Milos Novovic</p>
                   <span>Marketing @ Social Table</span>
                 </div>

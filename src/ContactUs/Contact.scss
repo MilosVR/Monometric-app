@@ -3,24 +3,29 @@
 #contact {
   .contact {
     display: flex;
-    padding-top: 100px;
+    padding-top: 155px;
     width: 1024px;
     margin: auto;
     border-bottom: 1px solid #d3d3d3;
-    p {
-      font-size: 0.9rem;
-    }
+    justify-content: flex-start;
   }
   .logo {
-    padding-right: 2rem;
+    padding-right: 4rem;
+    padding-top: 0.3rem;
+    img {
+      width: 29px;
+      height: 29px;
+    }
   }
   .contact_inner {
     margin: auto;
+    width: 100%;
     .contact_header {
       .contact_header_headline {
         h1 {
-          padding-bottom: 1.5rem;
+          padding-bottom: 1.75rem;
           position: relative;
+          font-size: 40px;
           &::after {
             content: "";
             position: absolute;
@@ -33,35 +38,40 @@
         }
         p {
           padding-top: 1.5rem;
-          padding-bottom: 2rem;
+          padding-bottom: 2.5rem;
           border-bottom: 1px solid #d3d3d3;
           color: #878787;
+          line-height: 1.6rem;
         }
       }
     }
     .contact_from_wraper {
-      padding: 2rem 0;
+      padding: 3rem 0;
       display: flex;
       justify-content: space-between;
       .contact_from_wraper_desc {
         width: 30%;
         margin-right: 5rem;
-        h2 {
+        h3 {
+          font-size: 1.5rem;
         }
       }
       form {
+        width: 542px;
         .contact_form_info {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 1rem;
+
           input {
-            padding: 0.5rem;
+            padding-left: 1rem;
             width: 100%;
+            height: 2.815rem;
           }
           p {
             font-weight: bold;
-            padding: 0.3rem 0;
-            font-size: 0.8rem;
+            padding-bottom: 0.75rem;
+            font-size: 0.75rem;
           }
           padding-bottom: 1.5rem;
         }
@@ -70,23 +80,31 @@
         padding: 1rem 0;
         p {
           font-weight: bold;
-          padding: 0.2rem 0;
+          font-size: 0.75rem;
+          padding: 0.75rem 0;
         }
         .industry_type_select {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-gap: 1rem;
+          font-weight: bold;
           & .industry_type_select_active {
             background: #c4ddd7;
             color: $primary_color;
-            font-weight: bold;
           }
           div {
             border: 1px solid #d3d3d3;
             cursor: pointer;
             padding: 0.5rem;
             text-align: center;
-            font-size: 0.9rem;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              font-size: 0.8rem;
+              padding: 0rem 0;
+            }
           }
           padding-bottom: 1.5rem;
         }
@@ -94,38 +112,33 @@
       .contact_form_metric_units {
         padding-bottom: 1.5rem;
         p {
-          padding-bottom: 0.2rem;
+          padding-bottom: 0.75rem;
           font-weight: bold;
+          font-size: 0.75rem;
         }
         input {
-          width: 4rem;
-          height: 3rem;
+          width: 65px;
+          height: 45px;
           text-align: center;
         }
       }
-      .contact_form_checkboxes {
-        padding-bottom: 1.5rem;
-        .contact_form_checkbox_field {
-          margin: 0.5rem 0;
-        }
-        span {
-          margin-left: 0.75rem;
-        }
-      }
+
       .contact_form_additional_details {
-        padding-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
         p {
-          padding-bottom: 0.2rem;
+          padding-bottom: 0.75rem;
           font-weight: bold;
+          font-size: 0.8rem;
         }
         textarea {
           width: 100%;
           resize: none;
           padding: 1rem;
           border: 1px solid #d3d3d3;
+          height: 92px;
         }
         span {
-          font-size: 0.8rem;
+          font-size: 0.68rem;
         }
         input[type="checkbox"] {
           border: 1px solid #d3d3d3;
@@ -139,7 +152,11 @@
         cursor: pointer;
         border-radius: 0.2rem;
         background: $primary_color;
-        color: #fff;
+        color: #fbfbfb;
+        width: 190px;
+        height: 50px;
+        font-size: 0.9rem;
+        font-weight: bold;
       }
     }
   }
@@ -184,6 +201,86 @@
       margin: 1.5rem 0;
       padding: 1rem 2rem;
       border-radius: 0.2rem;
+    }
+  }
+}
+
+// Checkbox
+.contact_form_checkboxes {
+  padding: 2rem 0;
+  p {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+}
+.contact_form_additional_details {
+  .contact_form_checkbox_field {
+    margin: 1.5rem 0;
+    & p {
+      line-height: 1.1rem;
+      font-size: 0.68rem !important;
+      font-weight: normal !important;
+    }
+  }
+}
+.contact_form_checkbox_field {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.contact_form_checkbox_field {
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked {
+      & ~ .checkmark {
+        background-color: rgb(83, 83, 83);
+        transition: all 200ms ease-in-out;
+      }
+      & ~ .checkmark:after {
+        display: block;
+      }
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 0.1rem;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+}
+
+.contact_form_checkbox_field {
+  .checkmark {
+    &::after {
+      left: 6px;
+      top: 2px;
+      width: 3px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
   }
 }

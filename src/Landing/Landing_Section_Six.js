@@ -10,13 +10,15 @@ const LandingSectionSix = () => {
         <Fade right>
           <div className="landing_section_6_inner_item_wraper">
             <h1>What’s in the box?</h1>
-            <p>
+            <p className="landing_section_text">
               State of the art, robust industry grade hardware that will never
               let you down. All components are scalable for your needs.
             </p>
             <div className="landing_section_6_inner_item">
               <img alt="" src="/assets/icon_2_1.svg" />
-              <p>Up to 8 hours of battery independency.</p>
+              <p style={{ fontWeight: "normal" }}>
+                Up to 8 hours of battery independency.
+              </p>
             </div>
             <div className="landing_section_6_inner_item">
               <img alt="" src="/assets/icon_2_2.svg" />

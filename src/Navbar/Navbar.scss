@@ -7,13 +7,12 @@ nav {
   transform: translate(-50%);
   width: 1024px;
   z-index: 1000;
-
   .navbar {
     display: flex;
     justify-content: space-between;
     background: transparent;
     align-items: center;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
     .logo {
       display: flex;
       align-items: center;
@@ -44,10 +43,11 @@ nav {
           margin: 0 0.2rem;
           text-align: center;
           a {
-            color: $ternary_color;
+            color: #96b5ad;
             font-weight: bold;
             padding: 1rem;
             border-bottom: 2px solid transparent;
+            font-size: 0.875rem;
             &.active_link_nav {
               border-bottom: 2px solid $primary_color;
               transition: all 400ms ease-in-out;
@@ -73,6 +73,8 @@ nav {
       color: $primary_color;
       margin: 0.2rem 0;
       width: 190px;
+      height: 50px;
+      font-weight: bold;
     }
   }
   .hamburger_menu {
@@ -113,18 +115,22 @@ nav {
           color: $primary_color;
           padding: 1rem 100px;
           border-radius: 0.2rem;
+          font-weight: bold;
         }
         a {
           color: #fff;
-          font-size: 2rem;
+          font-size: 1.5rem;
+          font-weight: bold;
         }
         .navbar_footer {
           padding-top: 4rem;
           p {
             color: #fff;
             padding-bottom: 0.2rem;
+            font-size: 0.8125rem;
           }
           span {
+            font-size: 0.6875rem;
             color: #b0cac3;
           }
         }

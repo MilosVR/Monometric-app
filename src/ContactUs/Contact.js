@@ -91,8 +91,6 @@ const Contact = (props) => {
     const industry_type_select_active = document.querySelector(
       ".industry_type_select_active"
     );
-    console.log(e.target.innerHTML);
-
     if (!e.target.classList.contains("industry_type_select_active")) {
       e.target.classList.add("industry_type_select_active");
       industry_type_select_active.classList.remove(

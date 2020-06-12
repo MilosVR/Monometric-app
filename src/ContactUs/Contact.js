@@ -29,6 +29,7 @@ const Contact = (props) => {
     email: "",
     company: "",
     industryType: "",
+    isAcceptAgreementChecked: false,
   });
 
   const [contactFormError, setContactFormError] = useState({
@@ -48,6 +49,9 @@ const Contact = (props) => {
 
   const contactFormSubmit = (e) => {
     e.preventDefault();
+    const accept_agreement_checkbox = document.querySelector(
+      ".agreement_checkbox"
+    );
     if (!formData.firstName) {
       setContactFormError({
         firstNameErr: "First Name is required",
@@ -76,6 +80,8 @@ const Contact = (props) => {
           "There was a problem with your submission. Please fix the errors and try again",
       });
       window.scrollTo(0, 0);
+    } else if (!formData.isAcceptAgreementChecked) {
+      accept_agreement_checkbox.classList.add("checkbox_error");
     } else {
       setContactFormError({
         firstNameErr: "",
@@ -83,6 +89,7 @@ const Contact = (props) => {
         emailErr: "",
         companyErr: "",
       });
+      accept_agreement_checkbox.classList.remove("checkbox_error");
       props.history.push("/contact-success");
     }
   };
@@ -101,6 +108,13 @@ const Contact = (props) => {
         industryType: e.target.innerHTML,
       });
     }
+  };
+
+  const acceptAgreementChecked = (e) => {
+    setFormData({
+      ...formData,
+      isAcceptAgreementChecked: e.target.checked,
+    });
   };
 
   return (
@@ -126,18 +140,29 @@ const Contact = (props) => {
             <div className="contact_from_wraper_desc">
               <h3>Your information</h3>
               {contactFormError.allFieldsErr && (
-                <p className="text_error">{contactFormError.allFieldsErr}</p>
+                <p className="text_error global_form_error">
+                  {contactFormError.allFieldsErr}
+                </p>
               )}
             </div>
             <form onSubmit={contactFormSubmit}>
               <div className="contact_form_info">
                 <div className="contact_form_info_field">
-                  <p>First Name*</p>
+                  <p
+                    className={
+                      contactFormError.firstNameErr ? "text_error" : null
+                    }
+                  >
+                    First Name*
+                  </p>
                   <input
                     placeholder="Name"
                     name="firstName"
                     onChange={onChange}
                     value={formData.firstName}
+                    className={
+                      contactFormError.firstNameErr ? "input_error" : null
+                    }
                   />
                   <Fade bottom>
                     {contactFormError.firstNameErr && (
@@ -148,12 +173,21 @@ const Contact = (props) => {
                   </Fade>
                 </div>
                 <div className="contact_form_info_field">
-                  <p>Last Name*</p>
+                  <p
+                    className={
+                      contactFormError.lastNameErr ? "text_error" : null
+                    }
+                  >
+                    Last Name*
+                  </p>
                   <input
                     placeholder="Surname"
                     name="lastName"
                     onChange={onChange}
                     value={formData.lastName}
+                    className={
+                      contactFormError.lastNameErr ? "input_error" : null
+                    }
                   />
                   <Fade bottom>
                     {contactFormError.lastNameErr && (
@@ -164,12 +198,17 @@ const Contact = (props) => {
                   </Fade>
                 </div>
                 <div className="contact_form_info_field">
-                  <p>Contact Email*</p>
+                  <p
+                    className={contactFormError.emailErr ? "text_error" : null}
+                  >
+                    Contact Email*
+                  </p>
                   <input
                     placeholder="Email Address"
                     name="email"
                     onChange={onChange}
                     value={formData.email}
+                    className={contactFormError.emailErr ? "input_error" : null}
                   />
                   <Fade bottom>
                     {contactFormError.emailErr && (
@@ -178,12 +217,21 @@ const Contact = (props) => {
                   </Fade>
                 </div>
                 <div className="contact_form_info_field">
-                  <p>Enter a company name*</p>
+                  <p
+                    className={
+                      contactFormError.companyErr ? "text_error" : null
+                    }
+                  >
+                    Company Name*
+                  </p>
                   <input
                     placeholder="Name"
                     name="company"
                     onChange={onChange}
                     value={formData.company}
+                    className={
+                      contactFormError.companyErr ? "input_error" : null
+                    }
                   />
                   <Fade bottom>
                     {contactFormError.companyErr && (
@@ -253,8 +301,13 @@ const Contact = (props) => {
                   cols="10"
                   placeholder="Enter additional details here..."
                 ></textarea>
-                <label className="contact_form_checkbox_field">
-                  <input type="checkbox" />
+                <label className="contact_form_checkbox_field agreement_checkbox">
+                  <input
+                    type="checkbox"
+                    className="accept_agreement_checkbox"
+                    onChange={acceptAgreementChecked}
+                    checked={formData.isAcceptAgreementChecked}
+                  />
                   <span className="checkmark"></span>
                   <p>
                     Z uporabo tega obrazca se strinjam s hrambo in upravljanjem

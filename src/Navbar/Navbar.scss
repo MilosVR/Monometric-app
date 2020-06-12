@@ -83,18 +83,17 @@ nav {
     transform: translate3d(0, -1800px, 0);
     height: 0;
     width: 100%;
-    top: -600px;
+    height: 100vh;
     left: 0;
     background: $primary_color;
     z-index: -1;
     display: flex;
-    transform: translate3d(0, 0, 0);
     position: fixed;
     transition: all 250ms ease-in-out;
     &.open_collapse_menu {
-      height: 100vh;
       top: 0;
       left: 0;
+      transform: translate3d(0, 0, 0);
       .navigation_links_collapse_menu {
         top: 50%;
         left: 10%;

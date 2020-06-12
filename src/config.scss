@@ -83,6 +83,13 @@ input {
   color: red;
   font-size: 0.9rem;
 }
+.input_error {
+  border: 1px solid red;
+}
+
+.global_form_error {
+  padding-bottom: 2rem;
+}
 .primary_btn {
   background: $primary_color;
   color: #fbfbfb;
